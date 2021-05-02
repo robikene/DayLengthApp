@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGI praktika 2021</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+    <!-- Leaflet.js -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin="">
+    </script>
+    <!-- Enda CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row">
+        <div id="vasak" class="col-md-6">
+            <div id="sisendid">
+                <input id="latitude" type="textbox" placeholder="Laiuskraad (näide: 58.375)"> 
+                <input id="longitude" type="textbox" placeholder="Pikkuskraad (näide: 26.724)"> 
+                <input id="date" type="date" value="2021-01-01">     
+                <input type="button" value="Otsi" onclick="address()"><br>
+            </div>
+
+            <div id="map"></div>
+
+            <ul id="andmed">
+                <li id="latlng">Laiuskraad ja pikkuskraad: </li>
+                <li id="sunrise">Päikesetõus: </li>
+                <li id="sunset">Päikeseloojang: </li>
+                <li id="length">Päeva pikkus: </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <div id="graafikuSisendid">
+                <input id="startDate" type="date" value="2021-01-01"> 
+                <input id="stopDate" type="date" value="2021-01-01"> 
+                <input type="button" value="Loo graafik" onclick="createChart()"><br>
+            </div>
+            <div id="chart">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <h2>Kasutamisjuhend</h2>
+        <p>Vasakpoolsetesse tekstiväljadesse saab sisestada laius- ning pikkuskraadid. Seejärel saab valida kuupäev ning "Otsi" nupule vajutades kuvatakse andmed.</p>
+        <p>Koordinaatide kirjutamise asemel saab valida ka kaardil asukoht, kuid esmalt peab valima sobiva kuupäeva.</p>
+        <p>Parempoolsed kuupäevade väljad on päevade pikkuse muutumise kuvamiseks. Esmalt peab 1) tekstiväljades valima laius- ning pikkuskraadi VÕI <br> 2) valima koordinaadid kaardile vajutades, seejärel sisestama kuupäevade vahemiku ning graafik kuvatakse ekraanile "Loo graafik" nuppu vajutades.</p>
+    </div>
+</body>
+    <!-- Enda js -->
+    <script src="js/script.js" type="text/javascript"></script>
+    <!-- Sun.js -->
+    <script src="js/sun.js" type="text/javascript"></script>
+</html>
