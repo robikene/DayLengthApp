@@ -25,7 +25,13 @@
 </head>
 <body>
     <div class="row">
+        
         <div id="vasak" class="col-md-6">
+            <div id="juhend" class="text-center">
+                <h2>Kaart</h2>
+                <p>Sisesta laius- ja pikkuskraadid ning vali kuupäev, et näha päikesetõusu ja -loojangu kellaaegu ning päeva pikkust sellel kuupäeval. Seejärel vajuta "Otsi" <br>
+                Koordinaate saab valida ka kaardile vajutades - vajuta sobivale kohale ning kaart annab sulle andmed nendel koordinaatidel.</p>
+            </div>
             <div id="sisendid">
                 <input id="latitude" type="textbox" placeholder="Laiuskraad (näide: 58.375)"> 
                 <input id="longitude" type="textbox" placeholder="Pikkuskraad (näide: 26.724)"> 
@@ -43,6 +49,11 @@
             </ul>
         </div>
         <div class="col-md-6">
+            <div id="juhend" class="text-center">
+                <h2>Päeva pikkuste graafik</h2>
+                <p>Graafik kuvab päevade pikkused valitud kuupäevade vahemikus. Kõigepealt pead valima koordinaadid kaardil, millise koha päeva pikkust teada soovid. <br>
+                Seejärel vali alguskuupäev (vasakul) ning lõppkuupäev (paremal) ning vajuta nupule "Loo graafik".</p>
+            </div>
             <div id="graafikuSisendid">
                 <input id="startDate" type="date" value="2021-01-01"> 
                 <input id="stopDate" type="date" value="2021-01-01"> 
@@ -52,12 +63,6 @@
                 <canvas id="myChart"></canvas>
             </div>
         </div>
-    </div>
-    <div class="text-center">
-        <h2>Kasutamisjuhend</h2>
-        <p>Vasakpoolsetesse tekstiväljadesse saab sisestada laius- ning pikkuskraadid. Seejärel saab valida kuupäev ning "Otsi" nupule vajutades kuvatakse andmed.</p>
-        <p>Koordinaatide kirjutamise asemel saab valida ka kaardil asukoht, kuid esmalt peab valima sobiva kuupäeva.</p>
-        <p>Parempoolsed kuupäevade väljad on päevade pikkuse muutumise kuvamiseks. Esmalt peab 1) tekstiväljades valima laius- ning pikkuskraadi VÕI <br> 2) valima koordinaadid kaardile vajutades, seejärel sisestama kuupäevade vahemiku ning graafik kuvatakse ekraanile "Loo graafik" nuppu vajutades.</p>
     </div>
 </body>
     <!-- Enda js -->
